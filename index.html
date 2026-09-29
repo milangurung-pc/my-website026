@@ -1,53 +1,105 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simple Web Page</title>
     <!-- Link to the external CSS file -->
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <header>
-        <h1>Welcome to Simple Web Page</h1>
+      <h1>Welcome to Simple Web Page</h1>
     </header>
 
     <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
 
-    <section id="home">
-        <h2>Home Section</h2>
-        <p>A simple web page to utilize the git basic commands and functionality.</p>
-        <p>This includes:</p>
-        <ul>
-            <li>Initilising the repository</li>
-            <li>Staging and commiting to the local repository</li>
-            <li>Setting up a remote github repository and pushing</li>
-            <li>Create a new branch and creating a pull request</li>
-        </ul>
+    <section id="home" class="git-guide">
+      <header class="section-header">
+        <h2>Git Basics & Workflow Guide</h2>
+        <p class="subtitle">A comprehensive hands-on introduction to essential Git commands and GitHub collaboration workflows.</p>
+      </header>
+
+      <div class="content-body">
+        <p>
+          Git is a distributed version control system that helps developers track changes, collaborate effectively, and manage codebases of
+          any scale. This guide covers the foundational steps to get your project version-controlled and hosted on GitHub.
+        </p>
+
+        <h3>Core Workflow Steps Covered:</h3>
+
+        <ol class="steps-list">
+          <li>
+            <h4>1. Initializing the Repository</h4>
+            <p>Start tracking your project locally by converting a directory into a Git repository.</p>
+            <pre><code>git init</code></pre>
+          </li>
+
+          <li>
+            <h4>2. Staging and Committing Changes</h4>
+            <p>Prepare your modified files for a snapshot and save them to your local repository history with a meaningful message.</p>
+            <pre><code>
+              git add .
+              git commit -m "Initial commit: Add HTML structure and content"
+            </code></pre>
+          </li>
+
+          <li>
+            <h4>3. Connecting Remote GitHub & Pushing</h4>
+            <p>Link your local repository to a remote repository hosted on GitHub and upload your local commits.</p>
+            <pre><code>
+              git remote add origin https://github.com/username/repository-name.git
+              git branch -M main
+              git push -u origin main
+            </code></pre>
+          </li>
+
+          <li>
+            <h4>4. Branching & Pull Requests (PRs)</h4>
+            <p>
+              Isolate new features or bug fixes on separate branches without affecting the main code, then submit a Pull Request on GitHub
+              for peer review and merging.
+            </p>
+            <pre><code>
+              git checkout -b feature/new-layout
+              # (make changes)
+              git add .
+              git commit -m "Add new page layout"
+              git push origin feature/new-layout
+            </code></pre>
+          </li>
+        </ol>
+      </div>
+
+      <footer class="section-footer">
+        <p>
+          <strong>Next Steps:</strong> Ready to practice? Open your terminal and follow along with these steps to publish your first
+          repository!
+        </p>
+      </footer>
     </section>
 
     <section id="about">
-        <h2>About Section</h2>
-        <p>This section contains information about the purpose of the page.</p>
+      <h2>About Section</h2>
+      <p>This section contains information about the purpose of the page.</p>
     </section>
 
     <section id="contact">
-        <h2>Contact Section</h2>
-        <p>
-            Email: <a href="mailto:notmilangurung@gmail.com">notmilangurung@gmail.com</a>.<br>
-            Github: <a href="https://github.com/Not-MilanGurung">@Not-MilanGurung</a>.
-        </p>
-
+      <h2>Contact Section</h2>
+      <p>
+        Email: <a href="mailto:notmilangurung@gmail.com">notmilangurung@gmail.com</a>.<br />
+        Github: <a href="https://github.com/Not-MilanGurung">@Not-MilanGurung</a>.
+      </p>
     </section>
 
     <footer>
-        <p>&copy; 2026 My Simple Web Page</p>
+      <p>&copy; 2026 My Simple Web Page</p>
     </footer>
-</body>
+  </body>
 </html>
